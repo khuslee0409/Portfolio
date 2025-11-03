@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+.header {
+    background-color: black;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+
+    display: flex;
+    justify-content: space-between; /* left vs right */
+    align-items: center;            /* vertical centering */
+    padding: 10px 20px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:20px;
+    flex-shrink: 0;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap:50px;
+    flex-shrink: 0;
+    
+}
+
+.logo{
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.5);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    border-radius: 8px;
+    z-index: 10;
+}
+
+.name {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.title{
+    font-family: "Noto Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: white;
+}
+
+.pro_section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    gap: 50px;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+    color: black;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 20px;
+}
+
+.pro_section div {
+    flex: 0 0 600px; 
+    max-width: 600px;
+    min-width: 400px;
+}
+
+.pro_section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    word-wrap: break-word; 
+}
+
+.pro_pic {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    flex-shrink: 0;
+}
+
+.project_container {
+    text-align: center;
+    margin: 50px 0;
+}
+
+.project_title{
+    display: inline-block;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    margin-top: 45px;
+}
+
+.projects{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: black;
+    color: white;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 40px;
+    margin: 20px;
+}
+
+.projects > div {
+    flex: 1, 1, 800px; /* Don't grow, can shrink, preferred width 300px */
+    background-color: #333;
+    padding: 20px;
+
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 8px;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    width: min(900px, 100%);
+    overflow: hidden;
+    max-height: 210px;
+}
+
+/* Expanded state */
+.projects > div.expanded {
+    max-height: 1500px; /* Expanded height */
+}
+
+
+
+
+
+
+.mp3player {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 8px 8px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: auto;               /* keep aspect ratio */
+    display: block;
+    border-radius: 12px;
+    /* remove this if present */
+    flex-shrink: 1;    
+}
+
+.proj1 {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 2px solid #5a67d8;
+    box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+}
+
+
+
+
+
+
+
+
+.skills{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    margin: 20px;
+}
+
+.skill{
+    flex: 0 1 280px; /* Increased width for more text */
+    background-color: #333;
+    color: white;
+    padding: 25px;
+    text-align: center;
+    font-family: "Noto Sans", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    min-height: 200px;
+    max-height: none; 
+    display: flex;
+    align-items: flex-start; 
+    justify-content: flex-start;
+    flex-direction: column;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.skill strong {
+    display: block;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    padding: 10px 0;
+    text-align: center;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100%;
+    border-bottom: 2px solid #555;
+}
+
+
+
+
+
+
+
